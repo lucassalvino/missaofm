@@ -1,0 +1,270 @@
+*{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    font-family: 'Open Sans';
+}
+img{
+    max-width: 100%;
+    height: auto;
+    align-self: flex-start;
+}
+body{
+    overflow-x: hidden;
+    background-color: #0D0D0D;
+}
+#logo-site{
+    height: auto;
+    width: 50px;
+}
+header{
+    width: 100%;
+    position: fixed;
+    background-color: #0D0D0D;
+    -webkit-box-shadow: 0px 0px 4px 1px #F29544; 
+    box-shadow: 0px 0px 4px 1px #F29544;
+    opacity: 0.9; 
+    z-index: 900;
+}
+footer{
+    width: 100%;
+    background-color: #0D0D0D;
+    -webkit-box-shadow: 0px -1px 4px 0px #F29544; 
+    box-shadow: 0px -1px 4px 0px #F29544;
+    opacity: 0.9;
+    z-index: 900;
+}
+.menu-topo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.rodape-fundo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+#logo-rodape{
+    height: auto;
+    width: 70px;
+}
+.menu-opcao{
+    margin: 0px 10px;
+}
+.menu-opcao a{
+    color: #F29544;
+    font-weight: 600;
+    transition-duration: .5s;
+    text-decoration: none;
+}
+.menu-opcao a:hover{
+    color: #D95032;
+}
+.social-opcao{
+    margin: 0px 10px;
+}
+
+.social-opcao img{
+    height: auto;
+    width: 30px;
+}
+
+.fundo-defalt{
+    min-height: 80vh;
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+.titulos_rodape{
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.rodape-fundo a{
+    color: #F29544;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+.rodape-fundo a:hover{
+    color: #D95032;
+}
+
+.contato-form, .conteudo{
+    width: 75%;
+    background-color: #0D0D0D;
+    -webkit-box-shadow: 0px 0px 4px 1px #F29544;
+    box-shadow: 0px 0px 4px 1px #F29544;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 30px 50px;
+    max-width: 1000px;
+}
+.titulo-contato{
+    color: #ffffff;
+}
+.contato-form label{
+    color: #ffffff;
+}
+#sessao-contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+textarea{
+    width: 100%;
+}
+input{
+    min-width: 400px;
+    height: 40px;
+}
+textarea, input{
+    text-indent: 5px;
+    outline: none!important;
+    border: 1px solid;
+    border-radius: 3px;
+}
+textarea{
+    padding-top: 2px;
+}
+#btnenviarcontato{
+    border:none;
+    background: #ffffff;
+    border-radius: 15px;
+    min-width: 200px;
+    min-height: 50px;
+    transition-duration: .5s;
+    outline: none!important;
+}
+#btnenviarcontato:hover{
+    color: #ffffff;
+    background-color:#F29544;
+    cursor: pointer;
+}
+.banner-home{
+    min-height: 30vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.conteudo-wordpress p{
+    font-family: "Nimbus-Regular"!important;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    color: #474544;
+}
+.conteudo-wordpress{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 65px;
+}
+.conteudo-wordpress h2{
+    font-family: "Nimbus-Regular"!important;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+    border-bottom: 1px solid #513073;
+    padding-bottom: 15px;
+}
+.conteudo-wordpress h3{
+    font-family: "Nimbus-Regular"!important;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: left;
+    color: #ffffff;
+}
+.conteudo-wordpress p{
+    font-family: "Nimbus-Regular"!important;
+    font-size: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+.container-membro-equipe, .programa-memoravel{
+    width: 100%!important;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F295444A;
+}
+.imagem-membro-equipe{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #513073;
+}
+.dados-integrante{
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.link-propaganda{
+    width: 75%;
+    max-width: 1000px;
+}
+.banner-propaganda{
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media (max-width: 1300px){
+    input{
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 1024px){
+    .fundo-defalt{
+        background-position: center right;
+        background-size: contain;
+    }
+    input{
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 900px){
+    input{
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .container-dois{
+        flex-direction: column;
+    }
+    .container-input, .container-input .d-flex{
+        width: 100%;
+    }
+    .container-input{
+        margin-top: 1.5rem;
+    }
+    .contato-form .mt-4{
+        margin-top: 1.5rem!important;
+    }
+}
+
+@media (max-width: 425px){
+    .contato-form{
+        width: 88%;
+        padding: 30px 20px;
+        max-width: 1000px;
+    }
+}
