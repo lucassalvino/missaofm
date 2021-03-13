@@ -2,6 +2,10 @@ function ativarMenu(id){
     $(id).addClass('ativo');
 }
 $(document).ready(function(){
+    radioplayer.load()
+    radioplayer.addEventListener("load", function() { 
+        radioplayer.play(); 
+    }, true);
     $(".telefone").mask("(00) 0000-00009");
     $("summary").click(function(evento) {
         $(".listagem-programacao").removeAttr('open');
@@ -31,7 +35,6 @@ $(document).ready(function(){
     $("#pause").on('click', function(){
         radioplayer.pause();
     });
-    radioplayer.play();
     radioplayer.onplaying = function() {
         $("#play").hide();
         $("#pause").show();
