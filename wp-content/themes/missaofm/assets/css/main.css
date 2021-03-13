@@ -61,6 +61,16 @@ footer{
     transition-duration: .5s;
     text-decoration: none;
 }
+
+.menu-opcao.ativo a{
+    border-bottom: 5px solid;
+    border-radius: 5px;
+}
+#error-404{
+    border-radius: 5px;
+    border: 1px solid #474544;
+}
+
 .menu-opcao a:hover{
     color: #D95032;
 }
@@ -194,13 +204,13 @@ textarea{
     text-align: left;
     color: #ffffff;
 }
-.container-membro-equipe, .programa-memoravel{
+.container-membro-equipe, .programa-memoravel, .container-programa{
     width: 100%!important;
     margin-top: 50px;
     padding-bottom: 10px;
     border-bottom: 1px solid #F295444A;
 }
-.imagem-membro-equipe{
+.imagem-membro-equipe, .imagem-programa{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,13 +219,85 @@ textarea{
     height: 200px;
     border: 1px solid #513073;
 }
-.dados-integrante{
+.imagem-programa{
+    border-radius: 10px;
+}
+.dados-integrante, .dados-programa{
     padding-left: 30px;
     margin-top: 10px;
 }
 .link-propaganda{
     width: 75%;
     max-width: 1000px;
+}
+.listagem-programacao{
+    color: #ffffff;
+    outline: none!important;
+    transition-duration: .5s;
+}
+
+.contato-programa p{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.summary{
+    outline: none!important;
+}
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+
+#bars {
+    height: 30px;
+    width: 40px;
+    display: flex;
+    transform: rotate(180deg);
+    justify-content: center;
+}
+
+.bar {
+    background: #ffffff;
+    bottom: 1px;
+    height: 3px;
+    width: 2px;      
+    animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;
+        height: 20px;
+    }
+}
+
+.bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+.bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
+.bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
+.bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }
+.bar:nth-child(5)  { left: 17px; animation-duration: 400ms; }
+.bar:nth-child(6)  { left: 21px; animation-duration: 427ms; }
+.bar:nth-child(7)  { left: 25px; animation-duration: 441ms; }
+.bar:nth-child(8)  { left: 29px; animation-duration: 419ms; }
+.bar:nth-child(9)  { left: 33px; animation-duration: 487ms; }
+.bar:nth-child(10) { left: 37px; animation-duration: 442ms; }​
+
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+}
+
+.containerpausestart img{
+    height: auto;
+    width: 40px;
+}
+.containerpausestart img:hover{
+    cursor: pointer;
 }
 .banner-propaganda{
     width: 100%;

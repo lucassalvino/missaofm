@@ -62,10 +62,10 @@
                         <a href="<?php echo get_home_url();?>/sobre">Sobre</a>
                     </div>
                     <div class="d-flex">
-                        <a href="#">Programação</a>
+                        <a href="<?php echo get_home_url();?>/programacao">Programação</a>
                     </div>
                     <div class="d-flex">
-                        <a href="#">Contato</a>
+                        <a href="#sessao-contato">Contato</a>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center flex-column">

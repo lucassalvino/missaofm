@@ -43,4 +43,7 @@ get_header();?>
         </div>
     </div>
 </div>
+<script>
+    ativarMenu('#sobre');
+</script>
 <?php get_footer();?>
