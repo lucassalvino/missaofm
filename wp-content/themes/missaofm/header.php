@@ -115,8 +115,8 @@ if(isset($linkdin)){
                 </div>
                 <div class="d-flex menu-opcao">
                     <div class='d-flex containerpausestart'>
-                        <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/play-icon.svg" alt="Play rádio" title="Escutar rádio ao vivo" id="play" style="display: none;">
-                        <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/pause-icon.svg" alt="Pause rádio" title="Pausar rádio" id="pause">
+                        <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/play-icon.svg" alt="Play rádio" title="Escutar rádio ao vivo" id="play">
+                        <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/pause-icon.svg" alt="Pause rádio" title="Pausar rádio" id="pause" style="display: none;">
                     </div>
                     <div id='bars'>
                         <div class='bar'></div>
