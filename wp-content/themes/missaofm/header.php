@@ -80,14 +80,17 @@ if(isset($linkdin)){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
     <script src="<?php echo bloginfo("template_url");?>/assets/js/main.js?v=1.1"></script>
     <?php wp_head(); ?>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php  echo bloginfo("template_url");?>/assets/css/main.css?v=1.0">
 </head>
 <header>
     <div class="d-flex menu-topo">
         <div class="d-flex justify-content-center">
             <a href="<?php echo get_home_url();?>">
-                <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/missaofmplay.png" alt="Logo Missão FM" id="logo-site">
+                <img class="" src="<?php  echo bloginfo("template_url");?>/assets/imagens/missaofm.png" alt="Logo Missão FM" id="logo-site">
             </a>
         </div>
 
@@ -109,27 +112,24 @@ if(isset($linkdin)){
                     </a>
                 </div>
                 <div class="d-flex menu-opcao">
-                    <a href="#sessao-contato">
-                        CONTATO
+                    <a href="#">
+                        EVENTOS
                     </a>
                 </div>
                 <div class="d-flex menu-opcao">
-                    <div class='d-flex containerpausestart'>
-                        <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/play-icon.svg" alt="Play rádio" title="Escutar rádio ao vivo" id="play">
-                        <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/pause-icon.svg" alt="Pause rádio" title="Pausar rádio" id="pause" style="display: none;">
-                    </div>
-                    <div id='bars'>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                        <div class='bar'></div>
-                    </div>
+                    <a href="#">
+                        FALE CONOSCO
+                    </a>
+                </div>
+                <div class="d-flex menu-opcao">
+                    <a href="#">
+                        PODCAST
+                    </a>
+                </div>
+                <div class="d-flex menu-opcao" id="contato">
+                    <a href="<?php echo get_home_url();?>/contato">
+                        CONTATO
+                    </a>
                 </div>
             </div>
         </div>
@@ -137,22 +137,21 @@ if(isset($linkdin)){
         <div class="d-flex">
             <div class="d-flex social-opcao">
                 <a href="#">
-                    <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/facebook.svg" alt="">
+                    <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/twitter.svg" alt="icone social twitter">
                 </a>
             </div>
             <div class="d-flex social-opcao">
                 <a href="#">
-                    <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/instagram.svg" alt="">
+                    <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/facebook.svg" alt="icone social facebook">
                 </a>
             </div>
             <div class="d-flex social-opcao">
                 <a href="#">
-                    <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/youtube.svg" alt="">
+                    <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/instagram.svg" alt="icone social instagram">
                 </a>
             </div>
         </div>
     </div>
 </header>
 <body>
-    <div class="fundo-defalt" style="background-image: url(<?php echo bloginfo("template_url");?>/assets/imagens/fundo-site.jpg);">
-        
+    <div class="fundo-defalt">

@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'missaofm' );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'admin' );
+define( 'DB_USER', 'root' );
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', 'D26m04a03' );
+define( 'DB_PASSWORD', '' );
 
 /** Nome do host do MySQL */
 define( 'DB_HOST', 'localhost' );

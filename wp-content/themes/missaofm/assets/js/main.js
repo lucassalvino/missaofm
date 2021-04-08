@@ -3,8 +3,19 @@ function ativarMenu(id){
 }
 $(document).ready(function(){
     radioplayer.load();
-    $('.bar').css('animation-play-state', 'paused');
-    setTimeout(function(){ radioplayer.play(); }, 3000);
+    var scroll = window.scrollY;
+    if(scroll > 40){
+        $("#logo-site").addClass('scroll');
+    }
+    $( window ).scroll(function(){
+        var scroll = window.scrollY;
+        if(scroll > 40){
+            $("#logo-site").addClass('scroll');
+        }else{
+            $("#logo-site").removeClass('scroll');
+        }
+    });
+
     $(".telefone").mask("(00) 0000-00009");
     $("summary").click(function(evento) {
         $(".listagem-programacao").removeAttr('open');
@@ -20,10 +31,8 @@ $(document).ready(function(){
             $("#pause").click();
         });
         widget.bind(SC.Widget.Events.PAUSE, function(){
-            $("#play").click();
         });
         widget.bind(SC.Widget.Events.FINISH, function(){
-            $("#play").click();
         });
     });
 
@@ -37,11 +46,9 @@ $(document).ready(function(){
     radioplayer.onplaying = function() {
         $("#play").hide();
         $("#pause").show();
-        $('.bar').css('animation-play-state', 'running');
     };
     radioplayer.onpause = function() {
         $("#play").show();
         $("#pause").hide();
-        $('.bar').css('animation-play-state', 'paused');
     };
 });

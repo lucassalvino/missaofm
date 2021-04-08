@@ -1,57 +1,13 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-46.0041" y1="634.1208" x2="-32.9334" y2="647.1917" gradientTransform="matrix(32 0 0 -32 1519 20757)">
-	<stop  offset="0" style="stop-color:#FFC107"/>
-	<stop  offset="0.507" style="stop-color:#F44336"/>
-	<stop  offset="0.99" style="stop-color:#9C27B0"/>
-</linearGradient>
-<path style="fill:url(#SVGID_1_);" d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192
-	c88.352,0,160-71.648,160-160V160C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112
-	V160C48,98.24,98.24,48,160,48h192c61.76,0,112,50.24,112,112V352z"/>
-<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-42.2971" y1="637.8279" x2="-36.6404" y2="643.4846" gradientTransform="matrix(32 0 0 -32 1519 20757)">
-	<stop  offset="0" style="stop-color:#FFC107"/>
-	<stop  offset="0.507" style="stop-color:#F44336"/>
-	<stop  offset="0.99" style="stop-color:#9C27B0"/>
-</linearGradient>
-<path style="fill:url(#SVGID_2_);" d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128
-	S326.688,128,256,128z M256,336c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80
-	C336,300.096,300.096,336,256,336z"/>
-<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-35.5456" y1="644.5793" x2="-34.7919" y2="645.3331" gradientTransform="matrix(32 0 0 -32 1519 20757)">
-	<stop  offset="0" style="stop-color:#FFC107"/>
-	<stop  offset="0.507" style="stop-color:#F44336"/>
-	<stop  offset="0.99" style="stop-color:#9C27B0"/>
-</linearGradient>
-<circle style="fill:url(#SVGID_3_);" cx="393.6" cy="118.4" r="17.056"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_2" fill="#ffffff" d="m343.193,22l-174.873,0c-80.466,0 -145.32,64.863 -145.32,144.958l0,174.079c0,80.1 64.854,145.963 145.32,145.963l174.873,0c80.467,0 146.807,-65.863 146.807,-145.963l0,-174.079c0,-80.095 -66.34,-144.958 -146.807,-144.958zm102.807,319.037c0,55.988 -46.562,101.963 -102.807,101.963l-174.873,0c-56.249,0 -102.32,-45.975 -102.32,-101.963l0,-174.079c0,-55.985 46.071,-101.958 102.32,-101.958l174.873,0c56.245,0 102.807,45.973 102.807,101.958l0,174.079z"/>
+  <path id="svg_3" fill="#ffffff" d="m255.756,137.947c-64.382,0 -116.581,51.961 -116.581,116.055c0,64.085 52.199,116.045 116.581,116.045c64.383,0 116.58,-51.96 116.58,-116.045c0,-64.094 -52.197,-116.055 -116.58,-116.055zm0,188.584c-40.164,0 -72.86,-32.551 -72.86,-72.529c0,-40.016 32.696,-72.534 72.86,-72.534c40.162,0 72.861,32.519 72.861,72.534c0,39.978 -32.699,72.529 -72.861,72.529z"/>
+  <path id="svg_4" fill="#ffffff" d="m381.08,113.779c-8.581,0 -15.538,6.924 -15.538,15.463c0,8.54 6.957,15.467 15.538,15.467c8.573,0 15.532,-6.927 15.532,-15.467c0,-8.539 -6.959,-15.463 -15.532,-15.463z"/>
+ </g>
 </svg>

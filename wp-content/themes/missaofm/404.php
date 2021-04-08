@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div class="d-flex justify-content-center align-items-center w-100">
+<div class="mt-5 d-flex justify-content-center align-items-center w-100">
     <div class="d-flex conteudo conteudo-wordpress">
         <div class="d-flex titulo">
             <h2>Essa página não existe</h2>

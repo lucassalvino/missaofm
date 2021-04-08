@@ -1,22 +1,54 @@
-*{
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    font-family: 'Open Sans';
-}
 img{
     max-width: 100%;
     height: auto;
     align-self: flex-start;
 }
-body{
+body, html{
     overflow-x: hidden;
+}
+#home-play{
+    width: 100%!important;
+    height: 100%!important;
+    background-color: rgba(0,0,0,.64)!important;
+}
+.fundo-padrao{
+    font-size: 36px;
+    background-color: #000000;
+}
+.texto-destaque{
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 300;
+}
+#conteudo-sobre-div{    
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+    z-index: 3;
+}
+.container-player{
+    padding: 3px 5px;
+    min-height: 25px;
+    min-width: 25vw;
+    height: 25px;
+    background-color: #2B333F;
+}
+.aovivotag{
+    color: #ffffff;
+    font-size: 12px;
+}
+body{
     background-color: #0D0D0D;
 }
 #logo-site{
     height: auto;
+    width: 70px;
+    transition-duration: .5s;
+}
+h1{
+    color: #ffffff;
+    font-weight: 300;
+}
+#logo-site.scroll{
     width: 50px;
 }
 header{
@@ -25,7 +57,6 @@ header{
     background-color: #0D0D0D;
     -webkit-box-shadow: 0px 0px 4px 1px #F29544; 
     box-shadow: 0px 0px 4px 1px #F29544;
-    opacity: 0.9; 
     z-index: 900;
 }
 footer{
@@ -40,7 +71,8 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
+    transition-duration: .5s;
 }
 .rodape-fundo{
     display: flex;
@@ -63,8 +95,7 @@ footer{
 }
 
 .menu-opcao.ativo a{
-    border-bottom: 5px solid;
-    border-radius: 5px;
+    border-bottom: 1px solid;
 }
 #error-404{
     border-radius: 5px;
@@ -80,16 +111,17 @@ footer{
 
 .social-opcao img{
     height: auto;
-    width: 30px;
+    width: 25px;
 }
 
 .fundo-defalt{
-    min-height: 80vh;
-    background-position: top right;
+    padding-top: 100px;
+}
+.fundo-defalt-banner{
+    background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 100px;
     z-index: 1;
 }
 
@@ -109,9 +141,6 @@ footer{
 
 .contato-form, .conteudo{
     width: 75%;
-    background-color: #0D0D0D;
-    -webkit-box-shadow: 0px 0px 4px 1px #F29544;
-    box-shadow: 0px 0px 4px 1px #F29544;
     opacity: 0.9;
     border-radius: 10px;
     padding: 30px 50px;
@@ -146,11 +175,7 @@ textarea{
     padding-top: 2px;
 }
 #btnenviarcontato{
-    border:none;
-    background: #ffffff;
-    border-radius: 15px;
-    min-width: 200px;
-    min-height: 50px;
+    background: transparent;
     transition-duration: .5s;
     outline: none!important;
 }
@@ -166,12 +191,11 @@ textarea{
     background-repeat: no-repeat;
     background-size: contain;
 }
-.conteudo-wordpress p{
-    font-family: "Nimbus-Regular"!important;
+.conteudo-wordpress p, p{
     font-weight: normal;
     font-size: 20px;
     text-align: left;
-    color: #474544;
+    color: #ffffff;
 }
 .conteudo-wordpress{
     display: flex;
@@ -181,17 +205,13 @@ textarea{
     margin-bottom: 65px;
 }
 .conteudo-wordpress h2{
-    font-family: "Nimbus-Regular"!important;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 32px;
+    font-weight: 300;
+    font-size: 45px;
     text-align: left;
     color: #ffffff;
-    border-bottom: 1px solid #513073;
     padding-bottom: 15px;
 }
 .conteudo-wordpress h3{
-    font-family: "Nimbus-Regular"!important;
     font-weight: bold;
     font-size: 28px;
     line-height: 32px;
@@ -199,7 +219,6 @@ textarea{
     color: #ffffff;
 }
 .conteudo-wordpress p{
-    font-family: "Nimbus-Regular"!important;
     font-size: 20px;
     text-align: left;
     color: #ffffff;
@@ -294,16 +313,90 @@ details[open] summary ~ * {
 
 .containerpausestart img{
     height: auto;
-    width: 40px;
+    width: 20px;
 }
 .containerpausestart img:hover{
     cursor: pointer;
 }
-.banner-propaganda{
+.containerpausestart{
+    margin-right: 15px;
+}
+.iframe-sound{
+    min-width: 500px;
+    max-width: 100%;
+}
+.conteudo-titulo-podcast{
+    margin-right: 100px;
+}
+.pecamusica{
+    font-size: 17px;
+    font-weight: 300;
+    font-family: 'Roboto';
+    color: #ffffff;
+}
+.numerowhatsapp{
+    font-weight: 300;
+    font-family: 'Roboto';
+    color: #ffffff;
+    font-size: 36px;
+}
+.button-missao{
+    display: flex;
+    outline: none!important;
+    text-decoration: none!important;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid #D95032;
+    min-height: 64px;
+    min-width: 272px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .5s;
+}
+.button-missao-sobre{
+    font-weight: 400;
+    font-size: 18px;
+}
+.button-missao:hover{
+    background-color: #D95032;
+    font-weight: 500;
+    color: #ffffff;
+}
+.carousel-eventos{
+    width: 100vw;
+    max-width: 960px;
+    height: 350px;
+    max-height: 350px;
+}
+.conteudo-carousel-eventos{
+    height: 100%;
     width: 100%;
-    height: 100px;
+    background-color: rgba(0,0,0,.4)!important;
+}
+.conteudo-carousel-eventos a{
+    text-decoration: none!important;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+}
+.conteudo-carousel-eventos h2{
+    font-weight: 300;
+    font-family: 'Dosis', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+.conteudo-carousel-eventos span{
+    font-weight: 400;
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #0af!important;
+}
+.background-sobre{
+    width: 100%;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
 }
 @media (max-width: 1300px){
