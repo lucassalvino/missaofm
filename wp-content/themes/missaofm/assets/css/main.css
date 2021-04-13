@@ -38,6 +38,7 @@ body, html{
     min-height: 25px;
     min-width: 25vw;
     height: 25px;
+    max-width: 250px;
     background-color: #2B333F;
 }
 .aovivotag{

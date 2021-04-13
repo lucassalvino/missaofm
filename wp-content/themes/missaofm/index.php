@@ -12,7 +12,7 @@ get_header();
             <div class="d-flex flex-column">
                 <div class="d-flex">
                     <h3>
-                        <span class="texto-destaque">OUÇA AO VIVO!</span>
+                        <span class="texto-destaque">OUÇA AO VIVO RÁDIO MISSÃO FM 87,9!</span>
                     </h3>
                 </div>
                 <div class="d-flex justify-content-start align-items-center container-player">
@@ -25,10 +25,10 @@ get_header();
                     </div>
                 </div>
                 <div class="d-flex justify-content-start align-items-center mt-5">
-                    <span class="pecamusica">Peça sua música vua WhatsApp</span>
+                    <span class="pecamusica">Peça sua música no WhatsApp</span>
                 </div>
                 <div class="d-flex justify-content-start align-items-center">
-                    <span class="numerowhatsapp">62 9 9677-0058</span>
+                    <span class="numerowhatsapp">62 9 9602-0244</span>
                 </div>
             </div>
         </div>
