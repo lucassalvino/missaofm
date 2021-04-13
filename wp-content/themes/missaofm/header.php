@@ -84,6 +84,7 @@ if(isset($linkdin)){
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="<?php  echo bloginfo("template_url");?>/assets/css/main.css?v=1.0">
 </head>
 <header>
@@ -111,18 +112,13 @@ if(isset($linkdin)){
                         PROGRAMAÇÃO
                     </a>
                 </div>
-                <div class="d-flex menu-opcao">
-                    <a href="#">
+                <div class="d-flex menu-opcao" id="eventos">
+                    <a href="<?php echo get_home_url();?>/eventos">
                         EVENTOS
                     </a>
                 </div>
-                <div class="d-flex menu-opcao">
-                    <a href="#">
-                        FALE CONOSCO
-                    </a>
-                </div>
-                <div class="d-flex menu-opcao">
-                    <a href="#">
+                <div class="d-flex menu-opcao" id="podcast">
+                    <a href="<?php echo get_home_url();?>/podcasts">
                         PODCAST
                     </a>
                 </div>
@@ -136,17 +132,17 @@ if(isset($linkdin)){
 
         <div class="d-flex">
             <div class="d-flex social-opcao">
-                <a href="#">
+                <a href="<?php echo $twitter;?>" target="_blank">
                     <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/twitter.svg" alt="icone social twitter">
                 </a>
             </div>
             <div class="d-flex social-opcao">
-                <a href="#">
+                <a href="<?php echo $facebook;?>" target="_blank">
                     <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/facebook.svg" alt="icone social facebook">
                 </a>
             </div>
             <div class="d-flex social-opcao">
-                <a href="#">
+                <a href="<?php echo $instagram;?>" target="_blank">
                     <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/instagram.svg" alt="icone social instagram">
                 </a>
             </div>

@@ -5,6 +5,9 @@
  */
 get_header();?>
 
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
 <section id="sessao-contato" class="mb-5 mt-5">
     <div class="d-flex flex-column contato-form">
         <form action="#" class="d-flex w-100 flex-column">
@@ -51,6 +54,25 @@ get_header();?>
         </form>
     </div>
 </section>
+<section id="mapcontainer" class="w-100 pb-5">
+    <div class="d-flex justify-content-center align-items-center w-100">
+        <div class="d-flex w-100" style="max-width: 1200px!important;">
+            <div id='map' style='width: 100%; height: 500px;'></div>
+        </div>
+    </div>
+</section>
+<script>
+mapboxgl.accessToken = '<?php echo get_field('chave_open_box', 'option');?>';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    center: [<?php echo get_field('latitudelongitude', 'option');?>],
+    zoom: 13
+});
+var marker1 = new mapboxgl.Marker({ color: '#F29544',})
+    .setLngLat([<?php echo get_field('latitudelongitude', 'option');?>])
+    .addTo(map);
+</script>
 <script>
     ativarMenu('#contato');
 </script>

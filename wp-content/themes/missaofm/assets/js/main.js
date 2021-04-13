@@ -2,6 +2,25 @@ function ativarMenu(id){
     $(id).addClass('ativo');
 }
 $(document).ready(function(){
+    $(".listagem-programacao").on('click', function(){
+        $('.listagem-programacao .arrow').removeClass('expandido');
+        $('.conteudo-mostrar').hide('slow');
+        var id = $(this).data('dia');
+        $('#'+id+' .arrow').addClass('expandido');
+        $('#horarios-'+id).show('slow');
+    });
+
+    $(window).on("load resize scroll", function() {
+        $(".background-programaca").each(function() {
+          var windowTop = $(window).scrollTop();
+          var elementTop = $(this).offset().top;
+          var leftPosition = windowTop - elementTop;
+            $(this)
+              .find(".bg-move")
+              .css({ left: leftPosition });
+        });
+    });
+
     radioplayer.load();
     var scroll = window.scrollY;
     if(scroll > 40){

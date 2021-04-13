@@ -44,21 +44,36 @@ get_header();
                         <h2>PODCASTS</h2>
                     </div>
                     <div class="d-flex">
-                        <a href="#" class="button-missao">
+                        <a href="<?php echo get_home_url();?>/podcasts" class="button-missao">
                             OUÇA TODOS OS EPISÓDIOS
                         </a>
                     </div>
                 </div>
+                <?php
+                    $podcast = CustomCustomQuery(
+                        array(
+                            'post_type' => 'post_podcast',
+                            'post_status'=>'publish',
+                            'posts_per_page' => 3
+                        ),
+                        function(){
+                            return array(
+                                'id' => get_the_ID(),
+                                'incorpora' => get_field('codigo_incorporacao')
+                            );
+                        }
+                    );
+                    wp_reset_postdata();
+                    wp_reset_query();
+                    $n = count($podcast);
+                    GetTrackFromIncorporado($podcast[0]['incorpora']);
+                ?>
                 <div class="d-flex flex-column">
-                    <div class="d-flex mt-3">
-                        <iframe class="iframe-sound" id="<?php echo bin2hex(random_bytes(10));?>" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251152470&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-                    </div>
-                    <div class="d-flex mt-3">
-                        <iframe class="iframe-sound" id="<?php echo bin2hex(random_bytes(10));?>" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251152470&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-                    </div>
-                    <div class="d-flex mt-3">
-                        <iframe class="iframe-sound" id="<?php echo bin2hex(random_bytes(10));?>" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251152470&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-                    </div>
+                    <?php for($k = 0; $k<$n; $k++):?>
+                        <div class="d-flex mt-3" data-aos="zoom-in" data-aos-duration="500">
+                            <?php IframeSoundCloud(GetTrackFromIncorporado($podcast[$k]['incorpora']));?>
+                        </div>
+                    <?php endfor;?>
                 </div>
             </div>
         </div>
@@ -84,21 +99,45 @@ get_header();
     <div class="d-flex justify-content-center titulo mt-3">
         <h1>PRÓXIMOS EVENTOS</h1>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column w-100 mt-5 pb-5">
+
+<?php
+$eventos = CustomCustomQuery(
+    array(
+        'post_type' => 'post_evento',
+        'post_status'=>'publish',
+        'posts_per_page' => 3
+    ),
+    function(){
+        return array(
+            'id' => get_the_ID(),
+            'titulo' => get_the_title(),
+            'thumbnail' => get_the_post_thumbnail_url(),
+            'link' => get_post_permalink()
+        );
+    }
+);
+wp_reset_postdata();
+wp_reset_query();
+$n = count($eventos);
+?>
+
+    <div class="d-flex justify-content-center align-items-center flex-column w-100 mt-5 pb-5" >
         <div id="carouseleventos" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="carousel-eventos" style="background-image: url(<?php echo bloginfo("template_url");?>/assets/imagens/ideia1.jpg);">
-                        <div class="conteudo-carousel-eventos">
-                            <a href="#">
-                                <div class="d-flex justify-content-center align-items-center w-100 h-100 flex-column">
-                                    <h2>Entrevista com Fulano</h2>
-                                    <span class="mt-3">Continue lendo</span>
-                                </div>
-                            </a>
+            <div class="carousel-inner" data-aos="fade-up" data-aos-duration="1000">
+                <?php for($i = 0; $i<$n; $i++): ?>
+                    <div class="carousel-item <?php echo $i==0?'active':''; ?>">
+                        <div class="carousel-eventos" style="background-image: url(<?php echo $eventos[$i]['thumbnail'];?>);">
+                            <div class="conteudo-carousel-eventos">
+                                <a href="<?php echo $eventos[$i]['link'];?>">
+                                    <div class="d-flex justify-content-center align-items-center w-100 h-100 flex-column">
+                                        <h2><?php echo $eventos[$i]['titulo']?></h2>
+                                        <span class="mt-3">Continue lendo</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endfor; ?>
             </div>
             <a class="carousel-control-prev" href="#carouseleventos" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -110,8 +149,28 @@ get_header();
             </a>
         </div>
         <div class="d-flex mt-5">
-            <a href="#" class="button-missao">
+            <a href="<?php echo get_home_url();?>/eventos" class="button-missao">
                 VEJA TODOS OS EVENTOS
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="fundo-padrao background-sobre  background-programaca bg-move" id="sobre" style="background-image: url(<?php echo get_field('banner_programacao');?>);">
+    <div class="d-flex justify-content-center align-items-center flex-column pt-5 pb-5 fundo-preto-transparente min-hei-programaca">
+        <div class="d-flex justify-content-center titulo mt-3">
+            <h1>PROGRAMAÇÃO</h1>
+        </div>
+        <div class="d-flex" style="max-width: 900px;">
+            <p class="text-center">
+                O melhor da MPB, smooth jazz, baladas nacionais e internacionais, R&B, blues e bossa nova mesclando nomes consagrados e os novos talentos da música mundial, brasileira e goiana.
+            </p>
+        </div>
+        <div class="d-flex mt-5 mb-4">
+            <a href="<?php echo get_home_url();?>/programacao" class="button-missao button-missao-sobre pl-2 pr-2">
+                CONFIRA NOSSA PROGRAMAÇÃO
             </a>
         </div>
     </div>
