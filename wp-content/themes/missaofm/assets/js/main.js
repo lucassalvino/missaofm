@@ -2,6 +2,14 @@ function ativarMenu(id){
     $(id).addClass('ativo');
 }
 $(document).ready(function(){
+    $("#btn-mobile").on('click', function(){
+        $('#opcoes-menu-desktop').show('slow').addClass('expandido');
+    });
+    $("#close-menu").on('click', function(){
+        $('#opcoes-menu-desktop').slideUp('slow', function(){
+            $('#opcoes-menu-desktop').removeClass('expandido');
+        });
+    });
     $(".listagem-programacao").on('click', function(){
         $('.listagem-programacao .arrow').removeClass('expandido');
         $('.conteudo-mostrar').hide('slow');

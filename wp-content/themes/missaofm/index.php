@@ -38,12 +38,12 @@ get_header();
 <section class="fundo-padrao w-100" id="podcasts">
     <div class="d-flex justify-content-center align-items-center pt-2">
         <div class="d-flex justify-content-center align-items-center conteudo conteudo-wordpress">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between container-podcasts-home">
                 <div class="d-flex flex-column conteudo-titulo-podcast">
                     <div class="d-flex justify-content-center titulo mt-3">
                         <h2>PODCASTS</h2>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex" id="btn-ouvir-episodios-descktop">
                         <a href="<?php echo get_home_url();?>/podcasts" class="button-missao">
                             OUÇA TODOS OS EPISÓDIOS
                         </a>
@@ -75,6 +75,11 @@ get_header();
                         </div>
                     <?php endfor;?>
                 </div>
+                <div id="btn-ouvir-episodios-mobile" style="display: none;">
+                    <a href="<?php echo get_home_url();?>/podcasts" class="button-missao">
+                        OUÇA TODOS OS EPISÓDIOS
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -82,7 +87,7 @@ get_header();
 
 <section class="fundo-padrao background-sobre pt-4" id="sobre" style="background-image: url(<?php echo get_field('banner_sobre');?>);">
     <div class="d-flex justify-content-center align-items-center flex-column pt-5 pb-5">
-        <div class="d-flex" style="max-width: 900px;">
+        <div class="d-flex texto-ler" style="max-width: 900px;">
             <p class="text-center">
                 A Rádio Missão traz música de qualidade, cultura e entretenimento para um público qualificado, exigente e de extremo bom gosto. Voltada para o segmento Adulto Contemporâneo e ouvida por formadores de opinião que priorizam e exigem qualidade.
             </p>
@@ -163,7 +168,7 @@ $n = count($eventos);
         <div class="d-flex justify-content-center titulo mt-3">
             <h1>PROGRAMAÇÃO</h1>
         </div>
-        <div class="d-flex" style="max-width: 900px;">
+        <div class="d-flex texto-ler" style="max-width: 900px;">
             <p class="text-center">
                 O melhor da MPB, smooth jazz, baladas nacionais e internacionais, R&B, blues e bossa nova mesclando nomes consagrados e os novos talentos da música mundial, brasileira e goiana.
             </p>

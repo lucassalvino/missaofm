@@ -31,7 +31,7 @@ get_header();?>
 ?>
 <div class="d-flex justify-content-center align-items-center w-100 pb-5 pagina-podcast">
     <div class="inner-conteudo pt-3 pb-3 w-100">
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column justify-content-center align-items-center">
             <?php for($k = 0; $k<$n; $k++):?>
                 <div class="d-flex mt-3 mb-4" data-aos="zoom-in" data-aos-duration="500">
                     <?php IframeSoundCloud(GetTrackFromIncorporado($podcast[$k]['incorpora']));?>

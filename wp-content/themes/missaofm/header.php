@@ -95,8 +95,22 @@ if(isset($linkdin)){
             </a>
         </div>
 
-        <div class="d-flex">
-            <div class="d-flex">
+        <div class="" id="opcoes-menu-desktop">
+            <div class="d-flex conteiner-menu">
+                <div class="show-mobile w-100">
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="d-flex">
+                            <a href="<?php echo get_home_url();?>">
+                                <img class="" src="<?php  echo bloginfo("template_url");?>/assets/imagens/missaofm.png" alt="Logo Missão FM" id="logo-site">
+                            </a>
+                        </div>
+                        <div class="d-flex">
+                            <div id="close-menu">
+                                <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/close.svg" alt="Close menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="d-flex menu-opcao" id="home">
                     <a href="<?php echo get_home_url();?>">
                         HOME
@@ -127,6 +141,25 @@ if(isset($linkdin)){
                         CONTATO
                     </a>
                 </div>
+                <div class="show-mobile w-100">
+                    <div class="d-flex mobile-social">
+                        <div class="d-flex social-opcao">
+                            <a href="<?php echo $twitter;?>" target="_blank">
+                                <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/twitter.svg" alt="icone social twitter">
+                            </a>
+                        </div>
+                        <div class="d-flex social-opcao">
+                            <a href="<?php echo $facebook;?>" target="_blank">
+                                <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/facebook.svg" alt="icone social facebook">
+                            </a>
+                        </div>
+                        <div class="d-flex social-opcao">
+                            <a href="<?php echo $instagram;?>" target="_blank">
+                                <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/instagram.svg" alt="icone social instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -145,6 +178,12 @@ if(isset($linkdin)){
                 <a href="<?php echo $instagram;?>" target="_blank">
                     <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/instagram.svg" alt="icone social instagram">
                 </a>
+            </div>
+        </div>
+
+        <div class="d-none" id="icone-menu-mobile">
+            <div id="btn-mobile">
+                <img src="<?php  echo bloginfo("template_url");?>/assets/imagens/menu.svg" alt="Icone Menu">
             </div>
         </div>
     </div>
