@@ -660,6 +660,19 @@ details[open] summary ~ * {
         justify-content: center;
         align-items: center;
     }
+    .conteudo-mostrar .item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .conteudo-mostrar .item::before{
+        content: '●';
+        color: #f29544;
+        display: block;
+        margin-top: 5px;
+        margin-right: 8px;
+    }
 }
 
 @media (max-width: 425px){
