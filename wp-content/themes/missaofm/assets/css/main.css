@@ -452,6 +452,9 @@ details[open] summary ~ * {
     min-width: 500px;
     max-width: 100%;
 }
+.pagina-podcast .iframe-sound{
+    min-width: 1000px;
+}
 .conteudo-titulo-podcast{
     margin-right: 100px;
 }
@@ -549,6 +552,9 @@ details[open] summary ~ * {
     }
     input{
         min-width: 300px;
+    }
+    .pagina-podcast .iframe-sound{
+        min-width: 80vw;
     }
 }
 

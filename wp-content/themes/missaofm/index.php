@@ -89,7 +89,7 @@ get_header();
     <div class="d-flex justify-content-center align-items-center flex-column pt-5 pb-5">
         <div class="d-flex texto-ler" style="max-width: 900px;">
             <p class="text-center">
-                A Rádio Missão traz música de qualidade, cultura e entretenimento para um público qualificado, exigente e de extremo bom gosto. Voltada para o segmento Adulto Contemporâneo e ouvida por formadores de opinião que priorizam e exigem qualidade.
+                <?php echo get_field('texto_sobre');?>
             </p>
         </div>
         <div class="d-flex mt-5 mb-4">
@@ -170,7 +170,7 @@ $n = count($eventos);
         </div>
         <div class="d-flex texto-ler" style="max-width: 900px;">
             <p class="text-center">
-                O melhor da MPB, smooth jazz, baladas nacionais e internacionais, R&B, blues e bossa nova mesclando nomes consagrados e os novos talentos da música mundial, brasileira e goiana.
+                <?php echo get_field('texto_programacao');?>
             </p>
         </div>
         <div class="d-flex mt-5 mb-4">

@@ -32,7 +32,7 @@
                         <a href="tel:+5562996020244"  target="_blank">(62) 9 9602-0244</a>
                     </div>
                     <div class="d-flex pb-1">
-                        <a href="mailto:"  target="_blank">teste@teste.com.br</a>
+                        <a href="mailto:contato@famago.com.br"  target="_blank">contato@famago.com.br</a>
                     </div>
                     <div class="d-flex">
                         <a href="<?php echo get_field('instagram', 'option');?>" target="_blank">@missaofm879</a>
