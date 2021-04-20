@@ -26,16 +26,16 @@
                 </div>
                 <div class="d-flex justify-content-center flex-column">
                     <div class="d-flex pb-3">
-                        <h5 class="titulos_rodape">Contados</h5>
+                        <h5 class="titulos_rodape">Contatos</h5>
                     </div>
                     <div class="d-flex pb-1">
-                        <a href="#">(62) 99999-9999</a>
+                        <a href="tel:+5562996020244"  target="_blank">(62) 9 9602-0244</a>
                     </div>
                     <div class="d-flex pb-1">
-                        <a href="#">teste@teste.com.br</a>
+                        <a href="mailto:"  target="_blank">teste@teste.com.br</a>
                     </div>
                     <div class="d-flex">
-                        <a href="#">@missao_fm</a>
+                        <a href="<?php echo get_field('instagram', 'option');?>" target="_blank">@missaofm879</a>
                     </div>
                 </div>
             </div>
